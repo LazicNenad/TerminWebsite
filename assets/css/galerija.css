@@ -1,0 +1,124 @@
+.header-galerija a {
+  color: var(--secondary-color);
+}
+
+.header-galerija {
+  height: 10vh;
+}
+
+.header-galerija .flex {
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-galerija .logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: inherit;
+  font-size: 2rem;
+  z-index: 10;
+  animation: slideFromLeftMore 1s ease;
+}
+
+.header-galerija li {
+  margin: 0 25px;
+  animation: slideFromRight 0.5s ease-out;
+}
+
+.header-galerija li a {
+  font-size: 1.4rem;
+}
+
+.header-galerija li a:hover {
+  font-weight: bold;
+}
+
+.section-1-galerija {
+  position: relative;
+  background: url('../img/background-main.jpg') no-repeat fixed bottom;
+  width: 100%;
+  height: 250px;
+}
+
+.section-1-galerija .tekst-na-sredini {
+  animation: slideFromLeft 1.5s ease;
+}
+
+.section-1-galerija-div {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+}
+
+.section-galerija-main h1 {
+  text-align: center;
+  padding: 3rem 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: slideFromTop 1.5s ease;
+}
+
+.section-galerija-main .container {
+  min-width: 1400px;
+}
+
+.section-galerija-main .grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.section-galerija-main .grid img {
+  height: 200px;
+  box-shadow: 0 0 4px rgb(24, 24, 24);
+  animation: opacityImg 1.5s ease-out;
+}
+
+.section-galerija-main .grid img:hover {
+  transform: scale(1.3, 1.3);
+  transition: all 0.6s ease;
+}
+
+/* Autor */
+.section-autor h1 {
+  text-align: center;
+  padding: 1rem 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: opacity 1s ease;
+}
+
+.section-autor .grid {
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.section-autor .autor-info {
+  align-self: flex-start;
+  animation: slideFromRight 1.2s ease;
+}
+
+.section-autor .autor-info p {
+  text-align: justify;
+}
+
+.section-autor img {
+  box-shadow: 0 0 5px rgb(75, 75, 75);
+  animation: slideFromLeft 1.2s ease;
+}
+
+@media screen and (max-width: 1500px) {
+  .section-galerija-main .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  .section-galerija-main .container {
+    min-width: 1100px;
+  }
+}
